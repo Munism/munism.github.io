@@ -46,7 +46,8 @@
 
                     <!-- site title -->
                     <header class="box box-white">
-                        <a href="javascript:void(0)" class="js-site-title"> <!--<img src="css/porsche.svg" alt="logo">-->
+                        <a href="javascript:void(0)" class="js-site-title">
+                            <!--<img src="css/porsche.svg" alt="logo">-->
                             <h1 class="box-text site-title-text">Porsche 918 Spyder</h1>
 
                         </a>
@@ -198,21 +199,24 @@
                             <p>Feel the power. <br> Live your dream. <br> Let this Legend change your life<br>
 
                             </p>
-                            <form action="index.html" method="post" class="contact-form">
+                            <form action="https://script.google.com/macros/s/AKfycbzVoT4erzZflco9YigERmQJQMcxpMgM6wm8f_8wToXoA9Ol-ic/exec" method="post"
+                                class="contact-form">
 
-                                <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6 form-group-2-col-left">
-                                    <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name" required/>
-                                </div>
-                                <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6 form-group-2-col-right">
-                                    <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email" required/>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" id="contact_subject" name="contact_subject" class="form-control" placeholder="Subject" required/>
-                                </div>
-                                <div class="form-group">
-                                    <textarea id="contact_message" name="contact_message" class="form-control" rows="4" placeholder="Message" required></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary submit-btn">Send</button>
+                                <fieldset>
+                                    <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6 form-group-2-col-left">
+
+                                        <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name" required/>
+                                    </div>
+                                    <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6 form-group-2-col-right">
+                                        <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email" required/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" id="contact_subject" name="contact_subject" class="form-control" placeholder="Subject" required/>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea id="contact_message" name="contact_message" class="form-control" rows="4" placeholder="Message" required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary submit-btn">Send</button>
 
                             </form>
                         </div>
@@ -251,35 +255,11 @@
     <script src="js/templatemo-script.js"></script>
     <!-- Templatemo scripts -->
 
-  $(function () {
-
-    // on submitting the form
-    $('form').submit(function (event) {
-        // prevent the default action of reloading the page
-        event.preventDefault();
-
-        var sendData = {};
-        $(event.target.nodeName + ' :input').each(function(){
-            sendData[this.name] = $(this).val();
-        });
-
-        var posting = $.ajax({
-            type: 'POST',
-            url: $(event.target.nodeName).prop('action'),
-            data: sendData
-        });
-
-        posting.done(function (response) {
-            console.log(response);
-            $('#alert-id').prop('hidden', false);
-            $('form :input').each(function(){
-                $(this).val('');
-            })
-        });
-        posting.fail(function (response) {
-            console.log(response);
-        });
-    });  
+    $(function () { // on submitting the form $('form').submit(function (event) { // prevent the default action of reloading
+    the page event.preventDefault(); var sendData = {}; $(event.target.nodeName + ' :input').each(function(){ sendData[this.name]
+    = $(this).val(); }); var posting = $.ajax({ type: 'POST', url: $(event.target.nodeName).prop('action'), data: sendData
+    }); posting.done(function (response) { console.log(response); $('#alert-id').prop('hidden', false); $('form :input').each(function(){
+    $(this).val(''); }) }); posting.fail(function (response) { console.log(response); }); });
 
 </body>
 
