@@ -22,7 +22,7 @@ function handleResponse(e) {
   try {
     // next set where we write the data - you could write to multiple/alternate destinations
     var doc = SpreadsheetApp.openById(SCRIPT_PROP.getProperty("key"));
-    var sheet = doc.getSheetByName("Sheet1");
+    var sheet = doc.getSheetByName(SHEET_NAME);
     
     // we'll assume header is in row 1 but you can override with header_row in GET/POST data
     var headRow = e.parameter.header_row || 1;
