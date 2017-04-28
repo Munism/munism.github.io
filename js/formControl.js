@@ -3,9 +3,9 @@ var SHEET_NAME = "Sheet1";
 var SCRIPT_PROP = PropertiesService.getScriptProperties(); // new property service
 
 // If you don't want to expose either GET or POST methods you can comment out the appropriate function
-function doGet(e){
-  return handleResponse(e);
-}
+// function doGet(e){
+//   return handleResponse(e);
+// }
 
 function doPost(e){
   return handleResponse(e);
