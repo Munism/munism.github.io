@@ -17,7 +17,7 @@ $(function () {
         });
 
         posting.done(function (response) {
-            console.log(response);
+            // console.log(response);
             $('#alert-id').prop('hidden', false);
             $('form :input').each(function(){
                 $(this).val('');
